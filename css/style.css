@@ -1,0 +1,377 @@
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #323538;
+}
+
+/* ヘッダー */
+header {
+    position: absolute;
+    z-index: 2;
+    /* ↑重なり順 */
+    width: 100%;
+    color: #ffffff;
+}
+header .container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* ↑左右に寄る */
+    align-items: center;
+    /* ↑上下真ん中に寄る */
+    padding: 16px 0;
+}
+header .logo {
+    font-size: 24px;
+    font-weight: 500;
+}
+header ul {
+    display: flex;
+}
+header li {
+    margin-left: 48px;
+    font-weight: 500;
+}
+header ul li a {
+    transition: .3s;
+}
+header ul li a:hover {
+    color: #c73939;
+}
+@media screen and (max-width: 767px) {
+    header nav {display: none;}
+}
+
+.mv {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+.item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* ↓img-changeという名前のアニメーションを25sかけて実行して繰り返す */
+    animation: img-change 26s infinite;
+    /* ↓アニメーションの過程で下の画像が透けて見えてしまう可能性があるため */
+    opacity: 0;
+}
+.item:nth-child(1){
+    animation-delay: 0s;
+}
+.item:nth-child(2){
+    animation-delay: 5s;
+}
+.item:nth-child(3){
+    animation-delay: 10s;
+}
+.item:nth-child(4){
+    animation-delay: 15s;
+}
+.item:nth-child(5){
+    animation-delay: 20s;
+}
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@keyframes img-change{
+    0%{
+        opacity: 0;
+    }
+    5%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    15%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/* フッター */
+footer {
+    background-color: #f9f9f9;
+    text-align: center;
+    font-size: 10px;
+    padding: 16px 0;
+}
+
+/* 共通 */
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.section {
+    padding: 60px 0;
+}
+.en {
+    font-size: 40px;
+    font-weight: 500;
+    color: #3e76cf;
+    margin-bottom: 30px;
+}
+.text {
+    font-size: 14px;
+    line-height: 2;
+}
+.button {
+    display: inline-block;
+    border: solid 1px #eeeeee;
+    background-color: #ffffff;
+    padding: 16px 40px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: .3s;
+}
+.button:hover {
+    border-color: #3e76cf;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media screen and (max-width: 767px) {
+    .section {
+        padding: 30px 0;
+    }
+    .en {
+        font-size: 30px;
+    }
+    .row {
+        flex-wrap: wrap;
+    }
+    .col {
+        width: 100% !important;
+    }
+}
+
+/* メインビジュアル */
+#main-visual {
+    position: relative;
+    height: 90vh;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    /* ↑「main-visual」からはみ出た部分は「隠す」 */
+}
+/* ↓ヘッダー背景が映像 */
+#main-visual video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ↑周りにいい感じにフィット */
+    z-index: -1;
+}
+/* ↓ヘッダー背景がスライドショー */
+.mv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ↑周りにいい感じにフィット */
+    z-index: -1;
+}
+
+#main-visual .box {
+    position: absolute;
+    top: 50%;
+    left: 13%;
+    transform: translateY(-50%);
+    /* ↑Y軸方向に自分の縦幅の〇%上に上げる */
+    color: #ffffff;
+}
+#main-visual .heading {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#main-visual h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+#main-visual span {
+    color: #e04b45;
+    font-size: 70px;
+}
+
+
+@media screen and (max-width: 767px) {
+    #main-visual .box {left: 6%;}
+    #main-visual .heading {font-size: 16px;}
+    #main-visual h1 {font-size: 34px;}
+}
+#top-about {
+    position: relative;
+    overflow: hidden;
+}
+#top-about::before {
+    content: 'MOUNTAIN';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 260px;
+    letter-spacing: -6px;
+    color: #f9f9f9;
+    font-weight: 900;
+    z-index: -1;
+}
+#top-about h2 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+#top-about .text {
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+    #top-about::before {
+        font-size: 80px;
+    }
+    #top-about h2 {
+        font-size: 18px;
+    }
+}
+
+#top-service {
+    background-color: #3e76cf;
+    border-radius: 20px;
+    color: #ffffff;
+}
+#top-service h2 {
+    color: #ffffff;
+}
+#top-service .text {
+    margin-bottom: 60px;
+}
+#top-service .row {
+    margin-bottom: 30px;
+}
+#top-service .col {
+    width: 32%;
+    background-color: #3e76cf;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+}
+#top-service img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+#top-service h3 {
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+#top-service .text2 {
+    font-size: 13px;
+    text-align: left;
+    line-height: 1.6;
+}
+#top-service .button_box {
+    text-align: center;
+    color: #323538;
+}
+
+@media screen and (max-width: 767px) {
+    #top-service .row {
+        gap: 20px 0;
+    }
+}
+
+#top-view {
+    background-color: #f9f9f9;  
+}
+#top-view h2 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+#top-view .text {
+    font-size: 13px;
+    margin-bottom: 40px;
+}
+#top-view .row {
+    align-items: center;
+}
+#top-view .col {
+    width: 48%;
+}
+
+#top-view img {
+    border-radius: 16px;
+}
+
+@media screen and (max-width: 767px) {
+    #top-view h2 {
+        font-size: 20px;
+    }
+    #top-view .row {
+        gap: 30px 0;
+    }
+}
+
+#top-contact h2 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+#top-contact .text {
+    font-size: 13px;
+    margin-bottom: 40px;
+}
+#top-contact .row {
+    align-items: center;
+}
+#top-contact .col {
+    width: 48%;
+}
+
+#top-contact img {
+    border-radius: 16px;
+}
+
+@media screen and (max-width: 767px) {
+    #top-contact h2 {
+        font-size: 20px;
+    }
+    #top-contact .row {
+        gap: 30px 0;
+        flex-direction: column-reverse;
+        /* ↑スマホの時だけ順番が入れ替わる */
+    }
+}
+

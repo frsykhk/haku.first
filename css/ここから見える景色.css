@@ -1,0 +1,93 @@
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #323538;
+}
+
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.section {
+    padding: 20px 0;
+}
+h1 {
+    font-size: 60px;
+    font-weight: 500;
+    color: #3e76cf;
+    margin-bottom: 30px;
+}
+.text {
+    font-size: 16px;
+    line-height: 2;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+    .section {
+        padding: 30px 0;
+    }
+    .en {
+        font-size: 30px;
+    }
+    .row {
+        flex-wrap: wrap;
+    }
+    .col {
+        width: 100% !important;
+    }
+}
+
+#top-view {
+    background-color: #f9f9f9;  
+}
+#top-view h2 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+#top-view h3 {
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+#top-view .text {
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+#top-view .row {
+    align-items: center;
+}
+#top-view .col {
+    width: 48%;
+}
+
+#top-view img {
+    border-radius: 16px;
+}
+
+.button_box {
+    line-height: 80px;
+    text-align: center;
+    color: #323538;
+}
+
+@media screen and (max-width: 767px) {
+    #top-view h1 {
+        font-size: 50px;
+    }
+    #top-view h2 {
+        font-size: 20px;
+    }
+    #top-view h3 {
+        font-size: 35px;
+    }
+    #top-view .row {
+        gap: 30px 0;
+    }
+    
+}

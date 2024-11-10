@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="お問い合わせ.css">
+</head>
+
+<body>
+    <div class="contact-form">
+
+        <p class="title">ご予約</p>
+        <form action="https://api.staticforms.xyz/submit" method="post">
+
+            <input type="hidden" name="accessKey" value="9cd90405-22d1-41df-8c14-bb2fdad3b059"> <!-- Required -->
+
+            <div class="item">
+                <p class="label">お名前</p>
+                <input type="text" class="inputs" name="name" required/>
+            </div>
+
+            <div class="item">
+                <p class="label">電話番号</p>
+                <input type="phone" class="inputs" name="phone" required/>
+                <p class="attention">※事前にご予約確認等をさせていただく場合がございます。<br>日中ご連絡の取れる連絡番号をお願いします。</p>
+            </div>
+
+            <div class="item">
+                <p class="label">メールアドレス</p>
+                <input type="email" class="inputs" name="email" placeholder="xxx@xxxxxxx" required/>
+            </div>
+
+            <div class="item">
+                <p class="label">住所</p><br>
+                <p class="page">郵便番号</p>
+                <input type="text" name="message" pattern="\d{3}-\d{4}" title="郵便番号"  placeholder="000-0000">
+                <p class="attention">※日本国内に住所がない方は 000 とご記入ください。</p>
+            </div>
+
+            <div class="item">
+                <p class="page">都道府県</p>
+                <select name="message">
+                    <option value="" selected>選択してください</option>
+    <option value="北海道">北海道</option>
+    <option value="青森県">青森県</option>
+    <option value="岩手県">岩手県</option>
+    <option value="宮城県">宮城県</option>
+    <option value="秋田県">秋田県</option>
+    <option value="山形県">山形県</option>
+    <option value="福島県">福島県</option>
+    <option value="茨城県">茨城県</option>
+    <option value="栃木県">栃木県</option>
+    <option value="群馬県">群馬県</option>
+    <option value="埼玉県">埼玉県</option>
+    <option value="千葉県">千葉県</option>
+    <option value="東京都">東京都</option>
+    <option value="神奈川県">神奈川県</option>
+    <option value="新潟県">新潟県</option>
+    <option value="富山県">富山県</option>
+    <option value="石川県">石川県</option>
+    <option value="福井県">福井県</option>
+    <option value="山梨県">山梨県</option>
+    <option value="長野県">長野県</option>
+    <option value="岐阜県">岐阜県</option>
+    <option value="静岡県">静岡県</option>
+    <option value="愛知県">愛知県</option>
+    <option value="三重県">三重県</option>
+    <option value="滋賀県">滋賀県</option>
+    <option value="京都府">京都府</option>
+    <option value="大阪府">大阪府</option>
+    <option value="兵庫県">兵庫県</option>
+    <option value="奈良県">奈良県</option>
+    <option value="和歌山県">和歌山県</option>
+    <option value="鳥取県">鳥取県</option>
+    <option value="島根県">島根県</option>
+    <option value="岡山県">岡山県</option>
+    <option value="広島県">広島県</option>
+    <option value="山口県">山口県</option>
+    <option value="徳島県">徳島県</option>
+    <option value="香川県">香川県</option>
+    <option value="愛媛県">愛媛県</option>
+    <option value="高知県">高知県</option>
+    <option value="福岡県">福岡県</option>
+    <option value="佐賀県">佐賀県</option>
+    <option value="長崎県">長崎県</option>
+    <option value="熊本県">熊本県</option>
+    <option value="大分県">大分県</option>
+    <option value="宮崎県">宮崎県</option>
+    <option value="鹿児島県">鹿児島県</option>
+    <option value="沖縄県">沖縄県</option>
+    <option value="その他">others</option>
+                </select>
+                <p class="attention">※日本国内に住所がない方は others を選択してください。</p>
+            </div>
+
+            <div class="item">
+                <p class="page">市町村区</p>
+                <input type="text" class="inputs" name="message" />
+            </div>
+
+            <div class="item">
+                <p class="page">丁目番地</p>
+                <input type="text" class="inputs" name="message" />
+                <p class="attention">※日本国内に住所がない方はご記入せずに次へお進みください。</p>
+            </div><br>
+
+            <div class="item">
+                <p class="label">宿泊希望日</p>
+                <input type="date" class="inputs" name="message" required/>
+            </div>
+            
+            <div class="item">
+                <p class="label">宿泊タイプ</p>
+                <div class="radio">
+                    <input type="radio" name="subject" id="個室タイプ" value="個室タイプ" /><label for="個室タイプ">個室タイプ</label>
+                    <input type="radio" name="subject" id="相部屋タイプ" value="相部屋タイプ" /><label for="相部屋タイプ">相部屋タイプ</label>
+            </div><br>
+
+            <div class="item">
+                <p class="label">宿泊プラン</p>
+                <div class="radio">
+                    <input type="radio" name="message" id="素泊まり" value="素泊まり" /><label for="素泊まり">素泊まり</label>
+                    <input type="radio" name="message" id="一泊一食付" value="一泊一食付" /><label for="一泊一食付">一泊一食付</label>
+                    <input type="radio" name="message" id="一泊二食付" value="一泊二食付" /><label for="一泊二食付">一泊二食付</label>
+                </div>
+            </div><br>
+
+            <div class="item">
+                <p class="label">ご質問</p>
+                <textarea name="message" placeholder="ご質問はこちら"></textarea>
+            </div>
+
+
+            <div class="button-area">
+                <input type="submit" value="予約確定"/>
+                <input type="reset" value="リセット"/>
+            </div>
+            
+            <div class="button_box">
+                <a href="./index.html" class="button">ページに戻る</a>
+            </div>
+        </form>
+    </div>

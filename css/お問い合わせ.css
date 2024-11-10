@@ -1,0 +1,120 @@
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #323538;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3e76cf;
+}
+
+.contact-form {
+    border: 1.5px solid #323538;
+    background-color: #ffffff;
+    padding: 50px 30px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #3e76cf;
+}
+
+form {
+    width: 460px;
+    margin: 0 auto;
+}
+
+.item {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.label {
+    float: left;
+    margin-right: 20px;
+    width: 135px;
+    border-left: 3px solid #3e76cf;
+    padding-left: 10px;
+}
+
+.inputs {
+    float: left;
+    width: 300px;
+}
+
+input[type="text"],input[type="phone"],input[type="email"] {
+    border: solid 0.1px #323538;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+textarea {
+    border: 1px solid #323538;
+    border-radius: 5px;
+    padding: 10px;
+    height: 160px;
+    width: 300px;
+    font-size: 15px;
+}
+
+.page {
+    float: left;
+    margin-right: 20px;
+    width: 135px;
+    padding-left: 14px;
+}
+
+.attention {
+    font-size: 13px;
+    padding-left: 14px;
+}
+
+.button-area {
+    text-align: center;
+}
+
+input[type="submit"]{
+    background-color: #3e76cf;
+    border: none;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 5px;
+    box-shadow: 1px 1px 3px black;
+    cursor: pointer;
+}
+
+input[type="reset"]{
+    background-color: #aaa;
+    border: none;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 5px;
+    box-shadow: 1px 1px 3px black;
+    cursor: pointer;
+}
+
+.button_box {
+    line-height: 80px;
+        text-align: center;
+        color: #323538;
+}
